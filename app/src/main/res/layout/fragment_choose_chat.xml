@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/gray">
+
+    <TextView
+        android:id="@+id/newChat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create\n new chat"
+        android:textSize="50sp"
+        android:textColor="@color/red"
+        android:background="@color/yellow"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/editJoinChat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <EditText
+        android:id="@+id/editJoinChat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red"
+        android:background="@color/white"
+        android:gravity="center"
+        android:textSize="50sp"
+        android:nextFocusDown="@id/editPass"
+        android:maxLines="1"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@+id/newChat"
+        app:layout_constraintBottom_toTopOf="@+id/joinChat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/joinChat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Join chat"
+        android:textSize="50sp"
+        android:textColor="@color/red"
+        android:background="@color/yellow"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/editJoinChat"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
