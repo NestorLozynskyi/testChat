@@ -13,21 +13,24 @@ class Connect(private val gson: Gson) {
     private var factory = WebSocketFactory()
     var ws: WebSocket? = null
 
-    fun createConnect(){
+    fun createConnect(): Boolean{
         ws = factory.createSocket(Constants.socketChatApi)
-        GlobalScope.launch (Dispatchers.IO) {
-            try {
-                ws?.connect()
-                println("connect (30)")
-            } catch (e: OpeningHandshakeException) {
-                println("Error (31): $e")
-            } catch (e: HostnameUnverifiedException) {
-                println("Error (32): $e")
-            } catch (e: WebSocketException) {
-                println("Error (33): $e")
-            } catch (e: Exception) {
-                println("Error (34): $e")
-            }
+        return try {
+            ws?.connect()
+            println("connect (30)")
+            true
+        } catch (e: OpeningHandshakeException) {
+            println("Error (31): $e")
+            false
+        } catch (e: HostnameUnverifiedException) {
+            println("Error (32): $e")
+            false
+        } catch (e: WebSocketException) {
+            println("Error (33): $e")
+            false
+        } catch (e: Exception) {
+            println("Error (34): $e")
+            false
         }
     }
 

@@ -4,7 +4,6 @@ import android.app.Application
 import com.example.chattest.di.koin.repositoryModule
 import com.example.chattest.di.koin.retrofitModule
 import com.example.chattest.di.koin.sharedPrefModule
-import com.example.chattest.di.koin.viewModelModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
@@ -31,7 +30,7 @@ class App : Application() {
                     sharedPrefModule,
                     repositoryModule,
                     retrofitModule,
-                    viewModelModule,
+                    //viewModelModule,
                 )
             )
         }

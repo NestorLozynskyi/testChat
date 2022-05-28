@@ -11,7 +11,7 @@ import androidx.viewbinding.ViewBinding
 
 abstract class BaseFragment<T : ViewBinding> (private val bindingClass: Class<T>) : Fragment() {
 
-    abstract val viewModel: BaseViewModel?
+    //abstract val viewModel: BaseViewModel?
     var navController: NavController? = null
 
     lateinit var binding: T
@@ -32,8 +32,8 @@ abstract class BaseFragment<T : ViewBinding> (private val bindingClass: Class<T>
         println("$view")
         navController = Navigation.findNavController(view)
 
-        created()
         observe()
+        created()
         observeError()
     }
 

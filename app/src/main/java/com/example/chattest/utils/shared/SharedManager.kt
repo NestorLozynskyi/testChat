@@ -9,7 +9,7 @@ class SharedManager(private val preferences: SharedPreferences, private val gson
     companion object {
         private const val TOKEN = "TOKEN"
         private const val USER_ID = "CHAT_ID"
-        private const val USER_LANG = "USER_LANG"
+        private const val LAST_CHATS = "LAST_CHATS"
     }
 
     var token: String?
