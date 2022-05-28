@@ -39,6 +39,7 @@ object Constants {
         const val RoomJoin = "room-join-response"
         const val GetChatUsers = "get-chat-users-response"
         const val GetChatMessage = "get-chat-messages-response"
-        const val SendMessage = "send-message-self-response"
+        const val SendMessage = "send-message-response"
+        const val SendMessageSelf = "send-message-self-response"
     }
 }

@@ -24,7 +24,7 @@ class ChatViewModel(
                     val it = gson.fromJson(data, GetChatResponse::class.java)
                     ldList.postValue(it.data.data.messages)
                 }
-                Constants.Response.SendMessage -> {
+                Constants.Response.SendMessage, Constants.Response.SendMessageSelf -> {
                     val it = gson.fromJson(data, ChatResponse::class.java)
                     //sharedManager.chatId = it.data.data.roomId
                     ld.postValue(it.data.data.message)
