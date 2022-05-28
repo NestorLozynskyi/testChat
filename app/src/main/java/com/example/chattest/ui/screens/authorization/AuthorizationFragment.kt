@@ -13,7 +13,7 @@ class AuthorizationFragment : BaseFragment<FragmentAuthorizationBinding>(Fragmen
     override fun created() {
         viewModel.connect()
         with(binding) {
-            next.setOnClickListener {
+            login.setOnClickListener {
                 viewModel.login(editLogin.text.toString(), editPass.text.toString())
             }
             registration.setOnClickListener {

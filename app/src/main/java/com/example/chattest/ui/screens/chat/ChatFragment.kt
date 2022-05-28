@@ -1,5 +1,8 @@
 package com.example.chattest.ui.screens.chat
 
+import android.graphics.Rect
+import androidx.core.view.size
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.chattest.base.BaseFragment
 import com.example.chattest.data.objects.Message
 import com.example.chattest.databinding.FragmentChatBinding
@@ -28,8 +31,18 @@ class ChatFragment : BaseFragment<FragmentChatBinding>(FragmentChatBinding::clas
                     editMessage.setText("")
                 }
             }
-            adapterMessage = MessageAdapter(viewModel.getUserId() ?: -1)
+            adapterMessage = MessageAdapter(viewModel.getUserId() ?: -1, requireContext())
             recycler.adapter = adapterMessage
+
+            parentView.viewTreeObserver.addOnGlobalLayoutListener {
+                val r = Rect()
+                parentView.getWindowVisibleDisplayFrame(r)
+                val screenHeight = parentView.rootView.height
+                val keypadHeight = screenHeight - r.bottom
+                if (keypadHeight > screenHeight * 0.15) {
+                    recycler.layoutManager?.scrollToPosition(messages.lastIndex)
+                }
+            }
         }
     }
 
@@ -37,10 +50,12 @@ class ChatFragment : BaseFragment<FragmentChatBinding>(FragmentChatBinding::clas
         bindDataTo(viewModel.ld){
             messages.add(it)
             adapterMessage.setData(messages)
+            binding.recycler.layoutManager?.scrollToPosition(messages.lastIndex)
         }
         bindDataTo(viewModel.ldList){
             messages.addAll(it)
             adapterMessage.setData(messages)
+            binding.recycler.layoutManager?.scrollToPosition(messages.lastIndex)
         }
     }
 }

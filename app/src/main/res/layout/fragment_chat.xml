@@ -4,7 +4,18 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="#777">
+    android:background="#777"
+    android:id="@+id/parentView">
+
+    <TextView
+        android:id="@+id/chatData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:text="members: 2"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler"
@@ -17,7 +28,7 @@
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:itemCount="8"
         tools:listitem="@layout/item_chat"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chatData"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/ll_send"/>
@@ -33,14 +44,20 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="8"
-            android:background="@color/white"/>
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:background="@drawable/bg_input_message"
+            android:padding="5dp"/>
         <TextView
             android:id="@+id/send"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:text="Send"
-            android:textSize="50sp"
-            android:textColor="#f00"
+            android:padding="10dp"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:textColor="@color/yellow"
+            android:background="@drawable/bg_btn_send"
             android:textStyle="bold"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"

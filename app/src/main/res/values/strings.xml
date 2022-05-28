@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ChatTest</string>
+    <string name="user_id">user id: %d</string>
 </resources>

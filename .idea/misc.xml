@@ -9,6 +9,19 @@
         <entry key="..\:/Users/Unit/AndroidStudioProjects/ChatTest/app/src/main/res/layout/fragment_choose_chat.xml" value="0.103125" />
         <entry key="..\:/Users/Unit/AndroidStudioProjects/ChatTest/app/src/main/res/layout/fragment_registration.xml" value="0.10416666666666667" />
         <entry key="..\:/Users/Unit/AndroidStudioProjects/ChatTest/app/src/main/res/layout/item_chat.xml" value="0.23236009732360097" />
+        <entry key="..\:/Users/Unit/AndroidStudioProjects/testChat/app/src/main/res/drawable/bg_btn.xml" value="0.1395" />
+        <entry key="..\:/Users/Unit/AndroidStudioProjects/testChat/app/src/main/res/drawable/bg_btn_join.xml" value="0.1" />
+        <entry key="..\:/Users/Unit/AndroidStudioProjects/testChat/app/src/main/res/drawable/bg_btn_send.xml" value="0.1395" />
+        <entry key="..\:/Users/Unit/AndroidStudioProjects/testChat/app/src/main/res/drawable/bg_edit_text.xml" value="0.1395" />
+        <entry key="..\:/Users/Unit/AndroidStudioProjects/testChat/app/src/main/res/drawable/bg_input_chat_id.xml" value="0.1" />
+        <entry key="..\:/Users/Unit/AndroidStudioProjects/testChat/app/src/main/res/drawable/bg_input_message.xml" value="0.1395" />
+        <entry key="..\:/Users/Unit/AndroidStudioProjects/testChat/app/src/main/res/drawable/bg_message_interlocutor.xml" value="0.1" />
+        <entry key="..\:/Users/Unit/AndroidStudioProjects/testChat/app/src/main/res/drawable/bg_message_my.xml" value="0.1" />
+        <entry key="..\:/Users/Unit/AndroidStudioProjects/testChat/app/src/main/res/layout/fragment_authorization.xml" value="0.18" />
+        <entry key="..\:/Users/Unit/AndroidStudioProjects/testChat/app/src/main/res/layout/fragment_chat.xml" value="0.18" />
+        <entry key="..\:/Users/Unit/AndroidStudioProjects/testChat/app/src/main/res/layout/fragment_choose_chat.xml" value="0.7792642140468228" />
+        <entry key="..\:/Users/Unit/AndroidStudioProjects/testChat/app/src/main/res/layout/fragment_registration.xml" value="0.2" />
+        <entry key="..\:/Users/Unit/AndroidStudioProjects/testChat/app/src/main/res/layout/item_chat.xml" value="0.2880098887515451" />
       </map>
     </option>
   </component>
