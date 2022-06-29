@@ -13,10 +13,3 @@ data class JoinChatResponseBody(
     val meta: ResponseMeta,
     val data: Chat
 )
-
-data class ChatsListItem(
-    val items: ArrayList<ChatsListItemI>
-)
-data class ChatsListItemI(
-    val idChat: Int
-)

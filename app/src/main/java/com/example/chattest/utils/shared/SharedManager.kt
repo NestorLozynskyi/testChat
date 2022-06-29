@@ -1,7 +1,6 @@
 package com.example.chattest.utils.shared
 
 import android.content.SharedPreferences
-import com.example.chattest.data.objects.ChatsListItem
 import com.google.gson.Gson
 import com.example.chattest.utils.shared.PrefHelper.set
 
@@ -20,14 +19,4 @@ class SharedManager(private val preferences: SharedPreferences, private val gson
     var userId: Int?
         get() = preferences.getInt(USER_ID, -1)
         set(value) { preferences[USER_ID] = value }
-
-    var chatList: ChatsListItem
-        get() {
-            val json = preferences.getString(LAST_CHATS, "")
-            return if (json == "") ChatsListItem(arrayListOf())
-            else gson.fromJson(json, ChatsListItem::class.java)
-        }
-        set(value) {
-            preferences[LAST_CHATS] = gson.toJson(value)
-        }
 }

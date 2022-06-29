@@ -47,7 +47,7 @@
         app:popUpTo="@id/navigation_main" />
     <fragment
         android:id="@+id/splashFragment"
-        android:name="com.example.chattest.ui.screens.splash.SplashFragment"
+        android:name="com.example.chattest.ui.screens.splash.Splash"
         android:label="Splash"
         tools:layout="@layout/fragment_splash">
         <action

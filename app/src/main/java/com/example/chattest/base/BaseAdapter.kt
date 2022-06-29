@@ -1,6 +1,5 @@
 package com.example.chattest.base
 
-import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,7 +10,6 @@ abstract class BaseAdapter<T>(@LayoutRes val layoutID: Int) : RecyclerView.Adapt
 
     private var items = arrayListOf<T>()
 
-    @SuppressLint("NotifyDataSetChanged")
     open fun setData(data: ArrayList<T>) {
         items = data
         notifyDataSetChanged()
